@@ -1,0 +1,71 @@
+[
+    {
+        "name": "Sum of N Numbers",
+        "description": "Write a program to calculate the sum of the first N numbers. \nEx: input=5 =>5+4+3+2+1 =15\noutput=15",
+        "code": "#include <stdio.h>\nint main() {\n    int n, sum = 0;\n    printf(\"Enter n: \");\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n        sum += i;\n    }\n    printf(\"Sum: %d\\n\", sum);\n    return 0;\n}"
+    },
+    {
+        "name": "Factorial of a Number",
+        "description": "Write a program to compute the factorial of a given number. \n Ex: input= 5  =>5x4x3x2x1 \n output=120",
+        "code": "#include <stdio.h>\nint main() {\n    int n, fact = 1;\n    printf(\"Enter n: \");\n    scanf(\"%d\", &n);\n    for (int i = 1; i <= n; i++) {\n        fact *= i;\n    }\n    printf(\"Factorial: %d\\n\", fact);\n    return 0;\n}"
+    },
+    {
+      "name": "Armstrong number",
+        "description": "Write a C program to check whether a number \nis Armstrong number or not A number is Armstrong number \nif the sum of the digit to the power of \nnumber of digits is equal to the original number",
+
+        "code": "#include<stdio.h>\n#include<math.h>\nint main()\n{\n\tint n,r,s=0,m,ct=0;\n\tscanf(\"%d\",&n);\n\tm=n;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\tct=ct+1;\n\t\tn=n/10;\n\t}\n\tn=m;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\ts=s+pow(r,ct);\n\t\tn=n/10;\n\t}\n\tif(m==s)\n\tprintf(\"Armstrong\");\n\telse\n\tprintf(\"Not an Armstrong\");\n\treturn 0;\n}\n"
+  
+    },
+    {
+    "name": "Ascending Order",
+    "description": "Write a C program to print 3 values \nin ascending order using ladder \nif..else",
+    "code": "#include<stdio.h>\nint main()\n{\n\tint a,b,c;\n\tscanf(\"%d %d %d\",&a,&b,&c);\n\tif(a<=b&&b<=c)\n\tprintf(\"%d %d %d \",a,b,c);\n\telse if(a<=c&&c<=b)\n\tprintf(\"%d %d %d\",a,c,b);\n\telse if(b<=a&&a<=c)\n\tprintf(\"%d %d %d\",b,a,c);\n\telse if(b<=c&&c<=a)\n\tprintf(\"%d %d %d\",b,c,a);\n\telse if(c<=a&&a<=b)\n\tprintf(\"%d %d %d\",c,a,b);\n\telse \n\tprintf(\"%d %d %d\",c,b,a);\n\t\n}\n"
+       
+    },
+    {
+    "name": "Categorize Age",
+    "description": "Write a C program to categorize a \nperson's age using ladder if..else  \n0-12: Child\n13-19: Teenager\n20-35: Young Adult\n36-55: Middle Aged\n56-100: Senior\nelse: Invalid" ,
+    "code": "#include<stdio.h>\nint main()\n{\n\tint age;\n\tscanf(\"%d\",&age);\n\tif(age>=0&&age<=12)\n\tprintf(\"Child\");\n\telse if(age>=13&&age<=19)\n\tprintf(\"Teenager\");\n\telse if(age>=20&&age<=35)\n\tprintf(\"Young Adult\");\n\telse if(age>=36&&age<=55)\n\tprintf(\"Middle Aged\");\n\telse if(age>=56&&age<=100)\n\tprintf(\"Senior\");\n\telse\n\tprintf(\"Invalid\");\n\treturn 0;\n}\n"
+    
+    },
+    {        
+    "name": "Automorphic Number",
+    "description": "automorphic number or not\nA number is called an automorphic number if and only if \nthe square of the given number ends with the same number \nitself. For example, 25, 76 are automorphic numbers because \ntheir square is 625 and 5776, respectively and the last two \ndigits of the square represent the number itself. Some other \nautomorphic numbers are 5, 6, 36, 890625, etc.",
+    "code": "c\n#include<stdio.h>\n#include<math.h>\nint main()\n{\n\tlong long int m,n,r,ct,p;\n\tscanf(\"%lld\",&n);\n\tp=n;\n\tm=n*n;\n\tct=0;\n\tdo\n\t{\n\t\tr=n%10;\n\t\tct=ct+1;\n\t\tn=n/10;\n\t}while(n>0);\n\tr=m%(int)pow(10,ct);\n\tif(r==p)\n\tprintf(\"Automorphic\");\n\telse\n\tprintf(\"Not Automorphic\");\n\treturn 0;\n}\n"
+    },
+    {
+     "name": "Automorphics in range",
+    "description": "C program to print automorphic numbers \nbetween 1 and a given value(25->625) \nSample Input and Output  \ninput=1000 \noutput=1 5 6 25 76 376 625\ninput=10000\noutput=1 5 6 25 76 376 625 9376 ",
+    "code": "c\n#include<stdio.h>\n#include<math.h>\nint main()\n{\n\tlong long int m,n,r,ct,p,i;\n\tscanf(\"%lld\",&n);\n\tfor(i=1;i<=n;i++)\n\t{\n\t\tp=i;\n\t\tm=i*i;\n\t\tct=0;\n\t\tdo\n\t\t{\n\t\t\tr=p%10;\n\t\t\tct=ct+1;\n\t\t\tp=p/10;\n\t\t}while(p>0);\n\t\tr=m%(int)pow(10,ct);\n\t\tif(r==i)\n\t\tprintf(\"%d \",i);\n\t}\n\treturn 0;\n}\n"
+    },
+    {
+    "name": "Binary to Decimal",
+    "description": "convert a given binary value to decimal",
+    "code": "c\n#include<stdio.h>\n#include<math.h>\nint main()\n{\n\tint b,d=0,r,i=0;\n\tscanf(\"%d\",&b);\n\tdo\n\t{\n\t\tr=b%10;\n\t\td=d+r*pow(2,i++);\n\t\tb=b/10;\n\t}while(b>0);\n\tprintf(\"%d\",d);\n\treturn 0;\n}\n"  
+    },
+    {
+    "name": "Classification of Character",
+    "description": "Write a C program that takes a character \nas input andclassifies it as:\nVowel\nConsonant\nDigit\nSpecial Character\n \ninput=I\noutput=Vowel\ninput=u\noutput=Vowel\ninput=k\noutput=Consonant\ninput=3\noutput=Digit\ninput=%\noutput=Special Character\ninput=P\noutput=Consonant\ninput=q\noutput=Consonant\n",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif((ch>=65&&ch<=90)||(ch>=97&&ch<=122))\n\t{\n\t\tif(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')\n\t\tprintf(\"Vowel\");\n\t\telse\n\t\tprintf(\"Consonant\");\n\t}\n\telse if(ch>=48&&ch<=57)\n\t{\n\t\tprintf(\"Digit\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Special Character\");\n\t}\n\treturn 0;\n}\n```"  
+    },
+    {
+    "name": "Character Classification",
+    "description": "Character Classification: Write a C program that takes a character as input and classifies it as:\nUppercase letter\nLowercase letter\nDigit\nSpecial character (anything else)\ninput=Z\noutput=uppercase\ninput=9\noutput=digit\ninput=m\noutput=lowercase",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif(ch>=65&&ch<=90)\n\tprintf(\"uppercase\");\n\telse if(ch>=97&&ch<=122)\n\tprintf(\"lowercase\");\n\telse if(ch>=48&&ch<=57)\n\tprintf(\"digit\");\n\telse\n\tprintf(\"special character\");\n\treturn 0;\n}\n```" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code":""  
+    },
+    {
+    "name": "",
+    "description": "",
+    "code":""  
+    },
+    {
+    "name": "",
+    "description": "",
+    "code":""  
+    }
+]
