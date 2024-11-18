@@ -54,6 +54,27 @@
     "code": "```c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif(ch>=65&&ch<=90)\n\tprintf(\"uppercase\");\n\telse if(ch>=97&&ch<=122)\n\tprintf(\"lowercase\");\n\telse if(ch>=48&&ch<=57)\n\tprintf(\"digit\");\n\telse\n\tprintf(\"special character\");\n\treturn 0;\n}\n```" 
     },
     {
+    "name": "Classify Number",
+    "description": "Write a C program that takes an integer as input and uses\nnested if-else statements to classify the number as:\nPositive Even\nPositive Odd\nNegative Even\nNegative Odd\nZero\ninput=15\noutput=Positive Odd\n input=-20\noutput=Negative Even\ninput=-33\noutput=Negative Odd\ninput=444\noutput=Positive Even\ninput=0\noutput=Zero",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n;\n\tscanf(\"%d\",&n);\n\tif(n>0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Positive Even\");\n\t\telse\n\t\tprintf(\"Positive Odd\");\n\t}\n\telse if(n<0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Negative Even\");\n\t\telse\n\t\tprintf(\"Negative Odd\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Zero\");\n\t}\n\treturn 0;\n}\n```"  
+    },
+    {
+    "name": "Color Name",
+    "description": "Write a C Program to print colorname based \non a given input value \n1-red\n2-blue\n3-green\n4-yellow\n5-pink\notherwise- black\ninput=-3\noutput=black\ninput=100\noutput=black\ninput=5\noutput=pink",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint v;\n\tscanf(\"%d\",&v);\n\tswitch(v)\n\t{\n\t\tcase 1:printf(\"red\");\n\t\t\t\tbreak;\n\t\tcase 2:printf(\"blue\");\n\t\t\t\tbreak;\n\t\tcase 3:printf(\"green\");\n\t\t\t\tbreak;\n\t\tcase 4:printf(\"yellow\");\n\t\t\t\tbreak;\n\t\tcase 5:printf(\"pink\");\n\t\t\t\tbreak;\n\t\tdefault:printf(\"black\");\n\t\t\t\tbreak;\n\t}\n\treturn 0;\n}\n```"  
+    },
+    {
+    "name": "Count the Digits",
+    "description": "Write a C program to count the digits of a given \npositive number\ninput=5555\noutput=Number of digits is 4\ninput=321\noutput=Number of digits is 3\n",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n,r,ct;\n\tscanf(\"%d\",&n);\n\tct=0;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\tct=ct+1;\n\t\tn=n/10;\n\t}\n\tprintf(\"Number of digits is %d\",ct);\n\treturn 0;\n}\n```" 
+    },
+    {
+    "name": "Count The Number of Factors",
+    "description": "C program to count the number of factors\nof a given value\nSample Input and Output\ninput=8\noutput=Number of factors is 4\ninput=9\noutput=Number of factors is 3\n",
+    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n,i,ct=0;\n\tscanf(\"%d\",&n);\n\tfor(i=1;i<=n;i++)\n\t{\n\t\tif(n%i==0)\n\t\tct++;\n\t}\n\tprintf(\"Number of factors is %d\",ct);\n\treturn 0;\n}\n```"
+  
+    },
+    {
     "name": "",
     "description": "",
     "code":""  
