@@ -75,9 +75,10 @@
   
     },
     {
-    "name": "",
-    "description": "",
-    "code":""  
+    "name": "Disarium Number",
+    "description": "disarium number or not\n1^1 + 7^2 + 5^3 = 1 + 49 + 125 = 175\n175 is a disarium number",
+    "code": "```c\n#include<stdio.h>\n#include<stdio.h>\nint main()\n{\n\tint n,r,rev=0,i=1,s=0,m;\n\tscanf(\"%d\",&n);\n\tm=n;\n\tdo\n\t{\n\t\tr=n%10;\n\t\trev=rev*10+r;\n\t\tn=n/10;\n\t}while(n>0);\n\tn=rev;\n\tdo\n\t{\n\t\tr=n%10;\n\t\ts=s+pow(r,i++);\n\t\tn=n/10;\n\t}while(n>0);\n\tif(s==m)\n\tprintf(\"Disarium\");\n\telse\n\tprintf(\"Not Disarium\");\n\treturn 0;\n}\n```"
+ 
     },
     {
     "name": "",
