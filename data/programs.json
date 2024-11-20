@@ -46,48 +46,116 @@
     {
     "name": "Classification of Character",
     "description": "Write a C program that takes a character \nas input andclassifies it as:\nVowel\nConsonant\nDigit\nSpecial Character\n \ninput=I\noutput=Vowel\ninput=u\noutput=Vowel\ninput=k\noutput=Consonant\ninput=3\noutput=Digit\ninput=%\noutput=Special Character\ninput=P\noutput=Consonant\ninput=q\noutput=Consonant\n",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif((ch>=65&&ch<=90)||(ch>=97&&ch<=122))\n\t{\n\t\tif(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')\n\t\tprintf(\"Vowel\");\n\t\telse\n\t\tprintf(\"Consonant\");\n\t}\n\telse if(ch>=48&&ch<=57)\n\t{\n\t\tprintf(\"Digit\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Special Character\");\n\t}\n\treturn 0;\n}\n```"  
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif((ch>=65&&ch<=90)||(ch>=97&&ch<=122))\n\t{\n\t\tif(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')\n\t\tprintf(\"Vowel\");\n\t\telse\n\t\tprintf(\"Consonant\");\n\t}\n\telse if(ch>=48&&ch<=57)\n\t{\n\t\tprintf(\"Digit\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Special Character\");\n\t}\n\treturn 0;\n}\n"  
     },
     {
     "name": "Character Classification",
     "description": "Character Classification: Write a C program that takes a character as input and classifies it as:\nUppercase letter\nLowercase letter\nDigit\nSpecial character (anything else)\ninput=Z\noutput=uppercase\ninput=9\noutput=digit\ninput=m\noutput=lowercase",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif(ch>=65&&ch<=90)\n\tprintf(\"uppercase\");\n\telse if(ch>=97&&ch<=122)\n\tprintf(\"lowercase\");\n\telse if(ch>=48&&ch<=57)\n\tprintf(\"digit\");\n\telse\n\tprintf(\"special character\");\n\treturn 0;\n}\n```" 
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tchar ch;\n\tscanf(\"%c\",&ch);\n\tif(ch>=65&&ch<=90)\n\tprintf(\"uppercase\");\n\telse if(ch>=97&&ch<=122)\n\tprintf(\"lowercase\");\n\telse if(ch>=48&&ch<=57)\n\tprintf(\"digit\");\n\telse\n\tprintf(\"special character\");\n\treturn 0;\n}\n" 
     },
     {
     "name": "Classify Number",
     "description": "Write a C program that takes an integer as input and uses\nnested if-else statements to classify the number as:\nPositive Even\nPositive Odd\nNegative Even\nNegative Odd\nZero\ninput=15\noutput=Positive Odd\n input=-20\noutput=Negative Even\ninput=-33\noutput=Negative Odd\ninput=444\noutput=Positive Even\ninput=0\noutput=Zero",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n;\n\tscanf(\"%d\",&n);\n\tif(n>0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Positive Even\");\n\t\telse\n\t\tprintf(\"Positive Odd\");\n\t}\n\telse if(n<0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Negative Even\");\n\t\telse\n\t\tprintf(\"Negative Odd\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Zero\");\n\t}\n\treturn 0;\n}\n```"  
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint n;\n\tscanf(\"%d\",&n);\n\tif(n>0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Positive Even\");\n\t\telse\n\t\tprintf(\"Positive Odd\");\n\t}\n\telse if(n<0)\n\t{\n\t\tif(n%2==0)\n\t\tprintf(\"Negative Even\");\n\t\telse\n\t\tprintf(\"Negative Odd\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Zero\");\n\t}\n\treturn 0;\n}\n"  
     },
     {
     "name": "Color Name",
     "description": "Write a C Program to print colorname based \non a given input value \n1-red\n2-blue\n3-green\n4-yellow\n5-pink\notherwise- black\ninput=-3\noutput=black\ninput=100\noutput=black\ninput=5\noutput=pink",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint v;\n\tscanf(\"%d\",&v);\n\tswitch(v)\n\t{\n\t\tcase 1:printf(\"red\");\n\t\t\t\tbreak;\n\t\tcase 2:printf(\"blue\");\n\t\t\t\tbreak;\n\t\tcase 3:printf(\"green\");\n\t\t\t\tbreak;\n\t\tcase 4:printf(\"yellow\");\n\t\t\t\tbreak;\n\t\tcase 5:printf(\"pink\");\n\t\t\t\tbreak;\n\t\tdefault:printf(\"black\");\n\t\t\t\tbreak;\n\t}\n\treturn 0;\n}\n```"  
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint v;\n\tscanf(\"%d\",&v);\n\tswitch(v)\n\t{\n\t\tcase 1:printf(\"red\");\n\t\t\t\tbreak;\n\t\tcase 2:printf(\"blue\");\n\t\t\t\tbreak;\n\t\tcase 3:printf(\"green\");\n\t\t\t\tbreak;\n\t\tcase 4:printf(\"yellow\");\n\t\t\t\tbreak;\n\t\tcase 5:printf(\"pink\");\n\t\t\t\tbreak;\n\t\tdefault:printf(\"black\");\n\t\t\t\tbreak;\n\t}\n\treturn 0;\n}\n"  
     },
     {
     "name": "Count the Digits",
     "description": "Write a C program to count the digits of a given \npositive number\ninput=5555\noutput=Number of digits is 4\ninput=321\noutput=Number of digits is 3\n",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n,r,ct;\n\tscanf(\"%d\",&n);\n\tct=0;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\tct=ct+1;\n\t\tn=n/10;\n\t}\n\tprintf(\"Number of digits is %d\",ct);\n\treturn 0;\n}\n```" 
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint n,r,ct;\n\tscanf(\"%d\",&n);\n\tct=0;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\tct=ct+1;\n\t\tn=n/10;\n\t}\n\tprintf(\"Number of digits is %d\",ct);\n\treturn 0;\n}\n" 
     },
     {
     "name": "Count The Number of Factors",
     "description": "C program to count the number of factors\nof a given value\nSample Input and Output\ninput=8\noutput=Number of factors is 4\ninput=9\noutput=Number of factors is 3\n",
-    "code": "```c\n#include<stdio.h>\nint main()\n{\n\tint n,i,ct=0;\n\tscanf(\"%d\",&n);\n\tfor(i=1;i<=n;i++)\n\t{\n\t\tif(n%i==0)\n\t\tct++;\n\t}\n\tprintf(\"Number of factors is %d\",ct);\n\treturn 0;\n}\n```"
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint n,i,ct=0;\n\tscanf(\"%d\",&n);\n\tfor(i=1;i<=n;i++)\n\t{\n\t\tif(n%i==0)\n\t\tct++;\n\t}\n\tprintf(\"Number of factors is %d\",ct);\n\treturn 0;\n}\n"
   
     },
     {
     "name": "Disarium Number",
     "description": "disarium number or not\n1^1 + 7^2 + 5^3 = 1 + 49 + 125 = 175\n175 is a disarium number",
-    "code": "```c\n#include<stdio.h>\n#include<stdio.h>\nint main()\n{\n\tint n,r,rev=0,i=1,s=0,m;\n\tscanf(\"%d\",&n);\n\tm=n;\n\tdo\n\t{\n\t\tr=n%10;\n\t\trev=rev*10+r;\n\t\tn=n/10;\n\t}while(n>0);\n\tn=rev;\n\tdo\n\t{\n\t\tr=n%10;\n\t\ts=s+pow(r,i++);\n\t\tn=n/10;\n\t}while(n>0);\n\tif(s==m)\n\tprintf(\"Disarium\");\n\telse\n\tprintf(\"Not Disarium\");\n\treturn 0;\n}\n```"
+    "code": "c\n#include<stdio.h>\n#include<stdio.h>\nint main()\n{\n\tint n,r,rev=0,i=1,s=0,m;\n\tscanf(\"%d\",&n);\n\tm=n;\n\tdo\n\t{\n\t\tr=n%10;\n\t\trev=rev*10+r;\n\t\tn=n/10;\n\t}while(n>0);\n\tn=rev;\n\tdo\n\t{\n\t\tr=n%10;\n\t\ts=s+pow(r,i++);\n\t\tn=n/10;\n\t}while(n>0);\n\tif(s==m)\n\tprintf(\"Disarium\");\n\telse\n\tprintf(\"Not Disarium\");\n\treturn 0;\n}\n"
  
     },
     {
-    "name": "",
-    "description": "",
-    "code":""  
+    "name": "Decimal to Binary",
+    "description": "Write a program that convert a given decimal value to binary",
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint b=0,d,r,t=1;\n\tscanf(\"%d\",&d);\n\tdo\n\t{\n\t\tr=d%2;\n\t\tb=b+r*t;\n\t\td=d/2;\n\t\tt=t*10;\n\t}while(d>0);\n\tprintf(\"%d\",b);\n\treturn 0;\n}\n"  
+    },
+    {
+    "name": "Decimal to Octal",
+    "description": "Write a program thatconvert a given decimal value to octal",
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint o=0,d,r,t=1;\n\tscanf(\"%d\",&d);\n\tdo\n\t{\n\t\tr=d%8;\n\t\to=o+r*t;\n\t\td=d/8;\n\t\tt=t*10;\n\t}while(d>0);\n\tprintf(\"%d\",o);\n\treturn 0;\n}\n"  
+    },
+    {
+    "name": "Calculate Electricity Bill",
+    "description": "Write a C program to calculate the electricity bill based\non the units consumed using laddr if..else:\n1-100 units: 1.5/unit\n101-300 units:2.5/unit\n301-500 units: 4.75/unit\nAbove 500 units: 6.85/unit\n\ninput=200\noutput=Bill is 500.00\n\ninput=350\noutput=Bill is 1662.50",
+    "code": "c\n#include<stdio.h>\nint main()\n{\n\tint n;\n\tfloat bill;\n\tscanf(\"%d\",&n);\n\tif(n>0&&n<=100)\n\t\tbill=n*1.5;\n\telse if(n>100&&n<=300)\n\t\tbill=n*2.5;\n\telse if(n>300&&n<=500)\n\t\tbill=n*4.75;\n\telse \n\t\tbill=n*6.85;\n\t\n\tprintf(\"Bill is %.2f\",bill); \n}"  
+    },
+    {
+    "name": "Fibonacci Number",
+    "description": "C program to print first n fibonacci numbers\n\nSample Input and Output\ninput=12\noutput=0 1 1 2 3 5 8 13 21 34 55 89\n\ninput=6\noutput=0 1 1 2 3 5",
+    "code": "#include<stdio.h>\nint main()\n{\n\tint n,i,a=0,b=1,c;\n\tscanf(\"%d\",&n);\n\tprintf(\"%d %d \",a,b);\n\tfor(i=3;i<=n;i++)\n\t{\n\t\tc=a+b;\n\t\tprintf(\"%d \",c);\n\t\ta=b;\n\t\tb=c;\n\t}\n\treturn 0;\n}\n"
+  
+    },
+    {
+    "name": "GCD of 2 Numbers",
+    "description": "gcd of 2 numbers",
+    "code": "\n#include<stdio.h>\nint main()\n{\n\tint a,b,r;\n\tscanf(\"%d %d\",&a,&b);\n\tdo\n\t{\n\t\tr=b%a;\n\t\tb=a;\n\t\ta=r;\n\t}while(a!=0);\n\tprintf(\"GCD is %d\",b);\n\treturn 0;\n}\n"
+ 
+    },
+    {
+    "name": "Calculate Grade of aStudent",
+    "description": "Write a C program to print the grade of a student if he is \n passed in all the subjects (marks>=50 means pass) using nested if..else \n    If failed in atleast one subject print Fail\n\n If average is\n 90-100: Grade A\n80 to <90: Grade B\n70 to <80: Grade C\n60 to <70: Grade D\n50 to <60: Grade E\n\ninput=80 85 88 86 89\noutput=Grade B\n\ninput=70 71 72 74 75\noutput=Grade C\n\ninput=60 62 65 67 68\noutput=Grade D\n\ninput=50 51 53 55 58\noutput=Grade E\n\ninput=90 85 88 92 94\noutput=Grade A\n\ninput=68 70 72 60 62\noutput=Grade D\n\ninput=40 60 75 80 85\noutput=Fail",
+    "code": "#include<stdio.h>\nint main()\n{\n\tint m1,m2,m3,m4,m5,sum;\n\tfloat avg;\n\t\n\tscanf(\"%d %d %d %d %d\",&m1,&m2,&m3,&m4,&m5);\n\tif(m1>=50&&m2>=50&&m3>=50&&m4>=50&&m5>=50)\n\t{\n\t\tsum=m1+m2+m3+m4+m5;\n\t\tavg=(float)sum/5;\n\t\tif(avg>=90&&avg<=100)\n\t\tprintf(\"Grade A\");\n\t\telse if(avg>=80&&avg<90)\n\t\tprintf(\"Grade B\");\n\t\telse if(avg>=70&&avg<80)\n\t\tprintf(\"Grade C\");\n\t\telse if(avg>=60&&avg<70)\n\t\tprintf(\"Grade D\");\n\t\telse\n\t\tprintf(\"Grade E\");\n\t}\n\telse\n\t{\n\t\tprintf(\"Fail\");\n\t}\n\treturn 0;\n}\n"
+  
     },
     {
     "name": "",
     "description": "",
-    "code":""  
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
+    },
+    {
+    "name": "",
+    "description": "",
+    "code": "" 
     }
 ]
