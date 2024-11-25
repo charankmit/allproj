@@ -114,24 +114,25 @@
   
     },
     {
-    "name": "",
-    "description": "",
-    "code": "" 
+    "name": "Greatest of 3 Values",
+    "description": "Write a C program to find the greatest of 3 values\nusing nested if..else\n\ninput=3 4 5\noutput=5\n\ninput= -4 -5 -3\noutput=-3\n\ninput=5 -4 3\noutput=5",
+    "code": "#include<stdio.h>\nint main()\n{\n\tint a,b,c;\n\tscanf(\"%d %d %d\", &a, &b, &c);\n\tif(a>b)\n\t{\n\t\tif(a>c)\n\t\tprintf(\"%d is greatest\", a);\n\t\telse\n\t\tprintf(\"%d is greatest\", c);\n\t}\n\telse\n\t{\n\t\tif(b>c)\n\t\tprintf(\"%d is greatest\", b);\n\t\telse\n\t\tprintf(\"%d is greatest\", c);\n\t}\n\treturn 0;\n}\n"
+ 
     },
     {
-    "name": "",
-    "description": "",
-    "code": "" 
+    "name": "Happy Number",
+    "description": "Write a C program Given number is Happy number or not\n8^2 + 2^2 = 68\n6^2 + 8^2 = 100\n1^2 + 0^2 + 0^2 = 1\n82 is a happy number number\n\n A happy number is a number defined by the following process:\nStarting with any positive integer, replace the number by the sum of the squares of its digits.\nRepeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle1 that does not include 1.",
+    "code": "\n#include<stdio.h>\nint main()\n{\n\tint n,r,s;\n\tscanf(\"%d\", &n);\n\tdo\n\t{\n\t\ts=0;\n\t\twhile(n>0)\n\t\t{\n\t\t\tr=n%10;\n\t\t\ts=s+r*r;\n\t\t\tn=n/10;\n\t\t}\n\t\tn=s;\n\t}while(n>9);\n\tif(n==1)\n\tprintf(\"Happy\");\n\telse\n\tprintf(\"UnHappy\");\n\treturn 0;\n}\n"
     },
     {
-    "name": "",
-    "description": "",
-    "code": "" 
+    "name": "Harshad number",
+    "description": "Harshad number or not A number is said to be the Harshad number\nif it is divisible by the sum of its digits. \n156 is a Harshad number",
+   "code": "\n#include<stdio.h>\nint main()\n{\n\tint n,r,s=0,m;\n\tscanf(\"%d\", &n);\n\tm=n;\n\tdo\n\t{\n\t\tr=n%10;\n\t\ts=s+r;\n\t\tn=n/10;\n\t}while(n>0);\n\tif(m%s==0)\n\tprintf(\"Harshad\");\n\telse\n\tprintf(\"Not Harshad\");\n\treturn 0;\n}\n" 
     },
     {
-    "name": "",
-    "description": "",
-    "code": "" 
+    "name": "Largest Digit",
+    "description": "Print the largest digit in a given number\n\ninput=63840\noutput=Largest digit is 8\n\ninput=47182\noutput=Largest digit is 8\n\ninput=111111\noutput=Largest digit is 1\n\ninput=999990\noutput=Largest digit is 9\n\ninput=86420\noutput=Largest digit is 8",
+    "code": "\n#include<stdio.h>\nint main()\n{\n\tint n,r,l;\n\tscanf(\"%d\", &n);\n\tl=n%10;\n\tn=n/10;\n\twhile(n>0)\n\t{\n\t\tr=n%10;\n\t\tif(l<r)\n\t\tl=r;\n\t\tn=n/10;\n\t}\n\tprintf(\"Largest digit is %d\", l);\n\treturn 0;\n}\n"
     },
     {
     "name": "",
